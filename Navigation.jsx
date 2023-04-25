@@ -7,19 +7,17 @@ import { NavigationContainer } from '@react-navigation/native';
 
 
 //Screen
-import HomeScreen from './screens/HomeScreen';
+import AccessScreen from './screens/AccessScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
-import ImageScreen from './screens/ImageScreen';
-import TimeScreen from './screens/TimeScreen';
 
 const Stack = createNativeStackNavigator();
 
 function StackNav() {
     return(
-        <Stack.Navigator initialRouteName='Home'>
+        <Stack.Navigator initialRouteName='Access'>
             <Stack.Screen 
-                name='Home' 
-                component={HomeScreen} 
+                name='Access' 
+                component={AccessScreen} 
                 options={{
                     headerShown:false
                 }}
@@ -32,22 +30,7 @@ function StackNav() {
                     headerBackTitleVisible: false
                 }}
             ></Stack.Screen>
-            <Stack.Screen 
-                name='Image' 
-                component={ImageScreen}
-                options={{
-                    // headerShown:true,
-                    headerBackTitleVisible: false
-                }}
-            ></Stack.Screen>
-            <Stack.Screen 
-                name='Time' 
-                component={TimeScreen}
-                options={{
-                    // headerShown:true,
-                    headerBackTitleVisible: false
-                }}
-            ></Stack.Screen>
+
         </Stack.Navigator>
     );
 }
